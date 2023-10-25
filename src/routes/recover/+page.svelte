@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { account, ID } from '$lib/appwrite';
+	import Input from '$lib/components/input.svelte';
+	import Button from '$lib/components/button.svelte';
 
 	let loggedInUser: { name: string } | null = null;
 
@@ -43,9 +45,9 @@
 </p>
 
 <form>
-	<input type="password" placeholder="Password" bind:value={password} />
-	<input type="password" placeholder="Confirm Password" bind:value={confirm} />
-	<button type="button" on:click={() => recover(password, confirm)}>Recover Password</button>
+	<Input type="password" placeholder="Password" bind:value={password} />
+	<Input type="password" placeholder="Confirm Password" bind:value={confirm} />
+	<Button on:click={() => recover(password, confirm)}>Recover Password</Button>
 
 	<button
 		type="button"
@@ -60,6 +62,7 @@
 		on:click={async () => {
 			await account.deleteSession('current');
 			loggedInUser = null;
-		}}>Logout</button
-	>
+		}}>
+		Logout
+	</button>
 </form>
