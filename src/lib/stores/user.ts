@@ -42,20 +42,3 @@ export const user = {
   recover,
   init
 };
-
-// const derp = {
-// 	$id: '6459af5f63613c589419',
-// 	$createdAt: '2023-05-09T02:26:39.558+00:00',
-// 	$updatedAt: '2023-10-24T04:52:43.160+00:00',
-// 	name: 'user_name',
-// 	registration: '2023-05-09T02:26:39.557+00:00',
-// 	status: true,
-// 	labels: [],
-// 	passwordUpdate: '2023-10-24T04:52:43.160+00:00',
-// 	email: 'user_email@gmail.com',
-// 	phone: '',
-// 	emailVerification: true,
-// 	phoneVerification: false,
-// 	prefs: {},
-// 	accessedAt: ''
-// };
