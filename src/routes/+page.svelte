@@ -1,9 +1,14 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
   import { user } from "$lib/stores/user";
   import { blog } from "$lib/stores/blog";
 
   let title = "";
   let description = "";
+
+  onMount(() => {
+    blog.init();
+  });
 </script>
 
 {#if $user}
